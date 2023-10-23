@@ -1,2 +1,2 @@
-# Django_Tutorials
+# Django_Tutorial
 Exploration of Djanogo With the Help of Different Small Applications
