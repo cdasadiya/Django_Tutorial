@@ -27,17 +27,21 @@ SECRET_KEY = 'django-insecure-9dly5l1py=rwkjxe@-^#!@pbsvz!)y(v9)!-4a-ve&bv4hxj^3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = []
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'material',
+    'material.admin',
+    # 'material.admin.default',
     'application1.apps.Application1Config',
     'application2.apps.Application2Config',
     'dynamic_view_app.apps.DynamicViewAppConfig',
-    'contact_mgt_models_app',
-    'django.contrib.admin',
+    'contact_mgt_models_app.apps.ContactMgtModelsAppConfig', # for Registerting the contact_mgt_models_app
+    'todo_app.apps.TodoAppConfig', # Registering the To Do Apps
+    # 'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',

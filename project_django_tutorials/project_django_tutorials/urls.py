@@ -16,14 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from . import views
 
-urlpatterns = [
+urlpatterns = [ 
     path('admin/', admin.site.urls),
-    path('', include('application1.urls')), # registering the applcation into project 
+    path('todo/',views.todo), # Register all the project level views 
+    path('app1/', include('application1.urls')), # registering the applcation into project 
     path('application2/', include('application2.urls')), # registering the applcation into project 
     path('dynamic_view/', include('dynamic_view_app.urls')), # registering the applcation into project 
-    
+    path('', include('todo_app.urls')), # Changes For To Do Apps : registering the applcation into project 
 ]
-
-#handler404='project_django_tutorials.views.error_view' 
-# handler500='project_django_tutorials.views.error_500'
